@@ -52,20 +52,22 @@
 <body class="<?php echo $class; ?>"> 
 <nav id="top">
   <div class="container">
-    <div class="col-md-7">
-        <ul class="header-list-left"> 
-            <li><img src="catalog/view/theme/default/stylesheet/assets/img/hend.png" alt="">Приятное соотношение <br> цены и качества</li>
-            <li><img src="catalog/view/theme/default/stylesheet/assets/img/machine.png" alt="">Бесплатная доставка <br> заказов от 3 тыс. руб.</li>
-            <li><img src="catalog/view/theme/default/stylesheet/assets/img/credit_cart.png" alt="">Оплата при <br> получении</li>
-        </ul>
-    </div>
-    <div class="col-md-5 text-right">
-        <ul class="header-list-right">
-            <li><img src="catalog/view/theme/default/stylesheet/assets/img/register.png" alt=""><a href="<?php echo $register; ?>"><?php echo $text_register; ?></a></li>
-            <li><img src="catalog/view/theme/default/stylesheet/assets/img/login.png" alt=""><a href="<?php echo $login; ?>"><?php echo $text_login; ?></a></li>
-            
-        </ul>
-        <?php echo $cart; ?>
+    <div class="row">
+        <div class="col-md-7">
+            <ul class="header-list-left"> 
+                <li><img src="catalog/view/theme/default/stylesheet/assets/img/hend.png" alt="">Приятное соотношение <br> цены и качества</li>
+                <li><img src="catalog/view/theme/default/stylesheet/assets/img/machine.png" alt="">Бесплатная доставка <br> заказов от 3 тыс. руб.</li>
+                <li><img src="catalog/view/theme/default/stylesheet/assets/img/credit_cart.png" alt="">Оплата при <br> получении</li>
+            </ul>
+        </div>
+        <div class="col-md-5 text-right">
+            <ul class="header-list-right">
+                <li><img src="catalog/view/theme/default/stylesheet/assets/img/register.png" alt=""><a href="<?php echo $register; ?>"><?php echo $text_register; ?></a></li>
+                <li><img src="catalog/view/theme/default/stylesheet/assets/img/login.png" alt=""><a href="<?php echo $login; ?>"><?php echo $text_login; ?></a></li>
+
+            </ul>
+            <?php echo $cart; ?>
+        </div>
     </div>
     
     
@@ -75,22 +77,16 @@
 <header>
   <div class="container">
     <div class="row">
-      <div class="col-sm-4">
-        <div id="logo">
-          <?php if ($logo) { ?>
-            <?php if ($home == $og_url) { ?>
-              <img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" class="img-responsive" />
-            <?php } else { ?>
-              <a href="<?php echo $home; ?>"><img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" class="img-responsive" /></a>
-            <?php } ?>
-          <?php } else { ?>
-            <h1><a href="<?php echo $home; ?>"><?php echo $name; ?></a></h1>
-          <?php } ?>
+      <div class="col-md-6">
+        <div id="logo">  
+          <img src="catalog/view/theme/default/stylesheet/assets/img/logo.png" alt="" class="img-responsive">
+          <p>фирменный магазин аккумуляторов DELTA</p>
         </div>
       </div>
-      <div class="col-sm-5"><?php echo $search; ?>
-      </div>
-      <div class="col-sm-3"><?php echo $cart; ?></div>
+      <div class="col-md-6 text-right">
+				<span class="tel">+7 (343) 361-00-00</span>
+				<p class="header-address">пн-пт 9.00-18.00 сб. 10.00-16.00 вс. выходной<br>г. Екатеринбург, ул. Машинная, д.42а, оф. 504</p>
+			</div>
     </div>
   </div>
 </header>
