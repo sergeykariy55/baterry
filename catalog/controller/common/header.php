@@ -14,7 +14,7 @@ class ControllerCommonHeader extends Controller {
 			}
 		}
 
-		if (isset($this->request->server['HTTPS']) && (($this->request->server['HTTPS'] == 'on') || ($this->request->server['HTTPS'] == '1'))) {
+		if ($this->request->server['HTTPS']) {
 			$server = $this->config->get('config_ssl');
 		} else {
 			$server = $this->config->get('config_url');
@@ -44,8 +44,6 @@ class ControllerCommonHeader extends Controller {
 		}
 
 		$this->load->language('common/header');
-		$data['og_url'] = (isset($this->request->server['HTTPS']) && (($this->request->server['HTTPS'] == 'on') || ($this->request->server['HTTPS'] == '1')) ? HTTPS_SERVER : HTTP_SERVER) . substr($this->request->server['REQUEST_URI'], 1, (strlen($this->request->server['REQUEST_URI'])-1));
-		$data['og_image'] = $this->document->getOgImage();
 
 		$data['text_home'] = $this->language->get('text_home');
 
@@ -58,6 +56,31 @@ class ControllerCommonHeader extends Controller {
 			$data['text_wishlist'] = sprintf($this->language->get('text_wishlist'), (isset($this->session->data['wishlist']) ? count($this->session->data['wishlist']) : 0));
 		}
 
+		$this->load->language('module/information');
+ 
+if (isset($this->request->get['path'])) {
+            $parts = explode('_', (string)$this->request->get['path']);
+            $data['category_id'] = (int)array_pop($parts);
+        }   else {
+            $data['category_id'] = '';
+        }   
+ 
+ 
+		$data['heading_title'] = $this->language->get('heading_title');
+ 
+		$data['text_contact'] = $this->language->get('text_contact');
+		$data['text_sitemap'] = $this->language->get('text_sitemap');
+ 
+		$this->load->model('catalog/information');
+ 
+		$data['informations'] = array();
+ 
+		foreach ($this->model_catalog_information->getInformations() as $result) {
+			$data['informations'][] = array(
+				'title' => $result['title'],
+				'href'  => $this->url->link('information/information', 'information_id=' . $result['information_id'])
+			);
+		}
 		$data['text_shopping_cart'] = $this->language->get('text_shopping_cart');
 		$data['text_logged'] = sprintf($this->language->get('text_logged'), $this->url->link('account/account', '', true), $this->customer->getFirstName(), $this->url->link('account/logout', '', true));
 
@@ -69,7 +92,6 @@ class ControllerCommonHeader extends Controller {
 		$data['text_download'] = $this->language->get('text_download');
 		$data['text_logout'] = $this->language->get('text_logout');
 		$data['text_checkout'] = $this->language->get('text_checkout');
-		$data['text_page'] = $this->language->get('text_page');
 		$data['text_category'] = $this->language->get('text_category');
 		$data['text_all'] = $this->language->get('text_all');
 
@@ -112,6 +134,7 @@ class ControllerCommonHeader extends Controller {
 
 					$children_data[] = array(
 						'name'  => $child['name'] . ($this->config->get('config_product_count') ? ' (' . $this->model_catalog_product->getTotalProducts($filter_data) . ')' : ''),
+						'id' =>  $category['category_id'],
 						'href'  => $this->url->link('product/category', 'path=' . $category['category_id'] . '_' . $child['category_id'])
 					);
 				}
