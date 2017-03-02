@@ -105,9 +105,50 @@ span.tel {
 		font-size: 16px;
 }
 
+#menu {
+    background-color: #f96511;
+    background-image: none;
+    background-repeat: repeat-x;
+    border-color: transparent;
+    min-height: 40px;
+    height: 85px;
+} 
+
+li.cat-menu {
+    height: 100%;
+    background: #535353;
+}
+
+#menu>li {
+    display: inline-block;
+}
+
 #menu .nav > li > a {
     color: #fff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
     margin: 10px 15px 10px 15px;
     min-height: 15px;
     padding: 0;
+    background-color: transparent;
+}
+
+/*---CART---*/
+
+.product-cart {
+    height: 420px;
+    overflow: initial;
+		position: relative;
+		border: 3px solid #e2e2e2;
+}
+
+.product-cart .cart-bottom {
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+    width: 100%;
+}
+
+.product-cart h4 a {
+    color: #f96511;
+    font-size: 18px;
 }
