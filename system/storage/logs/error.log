@@ -56,3 +56,17 @@
 2017-03-01 19:49:47 - PHP Notice:  Undefined variable: og_image in /home/c/ch41700/battery/public_html/catalog/view/theme/default/template/common/header.tpl on line 23
 2017-03-01 19:50:28 - PHP Notice:  Undefined variable: og_url in /home/c/ch41700/battery/public_html/catalog/view/theme/default/template/common/header.tpl on line 22
 2017-03-01 19:50:28 - PHP Notice:  Undefined variable: og_image in /home/c/ch41700/battery/public_html/catalog/view/theme/default/template/common/header.tpl on line 23
+2017-03-02 8:21:05 - PHP Notice:  Undefined variable: og_url in /home/c/ch41700/battery/public_html/catalog/view/theme/default/template/common/header.tpl on line 22
+2017-03-02 8:21:05 - PHP Notice:  Undefined variable: og_image in /home/c/ch41700/battery/public_html/catalog/view/theme/default/template/common/header.tpl on line 23
+2017-03-02 8:21:55 - PHP Notice:  Undefined variable: og_url in /home/c/ch41700/battery/public_html/catalog/view/theme/default/template/common/header.tpl on line 22
+2017-03-02 8:21:55 - PHP Notice:  Undefined variable: og_image in /home/c/ch41700/battery/public_html/catalog/view/theme/default/template/common/header.tpl on line 23
+2017-03-02 8:35:27 - PHP Notice:  Undefined variable: og_url in /home/c/ch41700/battery/public_html/catalog/view/theme/default/template/common/header.tpl on line 22
+2017-03-02 8:35:27 - PHP Notice:  Undefined variable: og_image in /home/c/ch41700/battery/public_html/catalog/view/theme/default/template/common/header.tpl on line 23
+2017-03-02 8:51:58 - PHP Notice:  Undefined variable: og_url in /home/c/ch41700/battery/public_html/catalog/view/theme/default/template/common/header.tpl on line 22
+2017-03-02 8:51:58 - PHP Notice:  Undefined variable: og_image in /home/c/ch41700/battery/public_html/catalog/view/theme/default/template/common/header.tpl on line 23
+2017-03-02 8:52:24 - PHP Notice:  Undefined variable: og_url in /home/c/ch41700/battery/public_html/catalog/view/theme/default/template/common/header.tpl on line 22
+2017-03-02 8:52:24 - PHP Notice:  Undefined variable: og_image in /home/c/ch41700/battery/public_html/catalog/view/theme/default/template/common/header.tpl on line 23
+2017-03-02 8:53:59 - PHP Notice:  Undefined variable: og_url in /home/c/ch41700/battery/public_html/catalog/view/theme/default/template/common/header.tpl on line 22
+2017-03-02 8:53:59 - PHP Notice:  Undefined variable: og_image in /home/c/ch41700/battery/public_html/catalog/view/theme/default/template/common/header.tpl on line 23
+2017-03-02 8:55:20 - PHP Notice:  Undefined variable: og_url in /home/c/ch41700/battery/public_html/catalog/view/theme/default/template/common/header.tpl on line 22
+2017-03-02 8:55:20 - PHP Notice:  Undefined variable: og_image in /home/c/ch41700/battery/public_html/catalog/view/theme/default/template/common/header.tpl on line 23
