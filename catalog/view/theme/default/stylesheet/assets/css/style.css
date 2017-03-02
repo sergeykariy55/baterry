@@ -104,3 +104,10 @@ span.tel {
 .header-address {
 		font-size: 16px;
 }
+
+#menu .nav > li > a {
+    color: #fff;
+    margin: 10px 15px 10px 15px;
+    min-height: 15px;
+    padding: 0;
+}
