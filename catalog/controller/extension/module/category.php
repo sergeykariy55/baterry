@@ -29,7 +29,7 @@ class ControllerExtensionModuleCategory extends Controller {
 
 		$data['categories'] = array();
 
-		$categories = $this->model_catalog_category->getCategories(0);
+		$categories = $this->model_catalog_category->getCategories(59);
 
 		foreach ($categories as $category) {
 			$children_data = array();
@@ -60,6 +60,10 @@ class ControllerExtensionModuleCategory extends Controller {
 				'href'        => $this->url->link('product/category', 'path=' . $category['category_id'])
 			);
 		}
+
+
+
+
 
 		return $this->load->view('extension/module/category', $data);
 	}

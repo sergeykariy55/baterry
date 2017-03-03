@@ -88,42 +88,49 @@
 				<p class="header-address">пн-пт 9.00-18.00 сб. 10.00-16.00 вс. выходной<br>г. Екатеринбург, ул. Машинная, д.42а, оф. 504</p>
 			</div>
     </div>
-  </div>
+  </div> 
 </header>
 
-<section id="menu" class="text-center">   
+<section id="menu">   
   <div class="container">
-       <div id="menu" class="nav text-center nav-center menu-ul">
-     
-          <?php foreach ($categories as $category) { ?>
+    <div id="menu">
 
-  					
-  						<div class="dropdown cat-menu">
-              <a href="<?php echo $category['href']; ?>" class="dropdown-toggle" data-toggle="dropdown"><?php echo $category['name']; ?></a>
-  							<div class="dropdown-menu">
-  								<div class="dropdown-inner">
-  									<?php foreach (array_chunk($category['children'], ceil(count($category['children']) / $category['column'])) as $children) { ?>
-  									<ul class="list-unstyled sub-menu">
-  										<?php foreach ($children as $child) { ?>
-  										<li><a href="<?php echo $child['href']; ?>"><?php echo $child['name']; ?></a></li>
-  										<?php } ?>
-  									</ul>
-  									<?php } ?>
-  								</div>
-  							</div>
-  						</div>
-            
-            <div class="menu_item">
-            <ul>
-              <?php foreach ($informations as $information) { ?>
-                <li><a href="<?php echo $information['href']; ?>"><?php echo $information['title']; ?></a></li>
-             <?php } ?>
-             </ul>
+    <?php foreach ($categories as $category) { ?>
+
+
+        <div class="dropdown cat-menu">
+            <a href="<?php echo $category['href']; ?>" class="dropdown-toggle cat-menu-toggle" data-toggle="dropdown">
+                <?php echo $category['name']; ?>
+                <img src="catalog/view/theme/default/stylesheet/assets/img/bar.png" alt="">
+            </a>
+            <div class="dropdown-menu">
+                <div class="dropdown-inner">
+                    <?php foreach (array_chunk($category['children'], ceil(count($category['children']) / $category['column'])) as $children) { ?>
+                        <ul class="list-unstyled sub-menu">
+                            <?php foreach ($children as $child) { ?>
+                                <li>
+                                    <a href="<?php echo $child['href']; ?>">
+                                        <?php echo $child['name']; ?> <i class="fa fa-chevron-right"></i> 
+                                    </a>
+                                </li>
+                            <?php } ?>
+                        </ul>
+                    <?php } ?>
+                </div>
             </div>
-        
+        </div>
 
-          <?php } ?>
-      </div>
+        <div class="menu_items">
+            <ul>
+                <?php foreach ($informations as $information) { ?>
+                    <li><a href="<?php echo $information['href']; ?>"><?php echo $information['title']; ?></a></li>
+                <?php } ?>
+            </ul>
+        </div>
+
+
+    <?php } ?>
+    </div>
   </div>
 </section>
 
